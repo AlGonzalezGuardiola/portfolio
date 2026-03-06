@@ -7,6 +7,11 @@
     <meta id="meta-desc" name="description"
         content="Álvaro — DevOps & Cloud Engineer. Learn more about my background and what I'm looking for." />
     <title>Álvaro — About</title>
+    <meta property="og:title" content="Álvaro — About" />
+    <meta property="og:description" content="DevOps & Cloud Engineer with 2+ years on AWS. Based in Mallorca, open to remote opportunities." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://algonzalez.cloud/portfolio/about.html" />
+    <meta property="og:image" content="https://algonzalez.cloud/portfolio/imagenes/favicon.png" />
     <link rel="icon" type="image/png" href="imagenes/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -61,27 +66,92 @@
             <div class="container section-inner">
                 <span class="section-label" data-i18n="label-about">Who I am</span>
                 <h1 class="section-title" data-i18n="title-about">About</h1>
-                <div class="about-story reveal">
-                    <p data-i18n="about-p1">I'm a DevOps &amp; Cloud Engineer with 2+ years of experience designing and
-                        operating infrastructure on AWS. My day-to-day revolves around automating repetitive work,
-                        building reliable CI/CD pipelines, and keeping systems observable and easy to maintain.</p>
-                    <p data-i18n="about-p2">I'm passionate about Infrastructure as Code — letting me treat cloud
-                        resources the same way developers treat application code: versioned, reviewed and reproducible.
-                        I'm actively looking for remote or hybrid roles and international opportunities where I can grow
-                        alongside a great engineering team.</p>
-                    <ul class="about-facts">
-                        <li><span class="fact-key" data-i18n="fact-location-key">Based in</span><span class="fact-val"
-                                data-i18n="fact-location-val">Mallorca, Spain</span></li>
-                        <li><span class="fact-key" data-i18n="fact-cloud-key">Cloud</span><span
-                                class="fact-val">AWS</span></li>
-                        <li><span class="fact-key" data-i18n="fact-iac-key">IaC</span><span class="fact-val">Terraform,
-                                CloudFormation</span></li>
-                        <li><span class="fact-key" data-i18n="fact-cicd-key">CI/CD</span><span class="fact-val">AWS
-                                CodePipeline, GitHub Actions</span></li>
-                        <li><span class="fact-key" data-i18n="fact-open-key">Open to</span><span class="fact-val"
-                                data-i18n="fact-open-val">Remote / Hybrid</span></li>
-                    </ul>
-                    <a href="projects.html" class="text-link" data-i18n="about-link">More about my experience →</a>
+                <div class="about-layout reveal">
+                    <!-- Avatar -->
+                    <div class="avatar-col">
+                        <div class="avatar-circle" aria-hidden="true">ÁG</div>
+                        <div class="avatar-available">
+                            <span class="avail-dot"></span>
+                            <span data-i18n="fact-open-val">Remote / Hybrid</span>
+                        </div>
+                    </div>
+
+                    <!-- Bio + facts -->
+                    <div class="about-content-col">
+                        <div class="about-story">
+                            <p data-i18n="about-p1">I'm a DevOps &amp; Cloud Engineer with 2+ years of experience designing and
+                                operating infrastructure on AWS. My day-to-day revolves around automating repetitive work,
+                                building reliable CI/CD pipelines, and keeping systems observable and easy to maintain.</p>
+                            <p data-i18n="about-p2">I'm passionate about Infrastructure as Code — letting me treat cloud
+                                resources the same way developers treat application code: versioned, reviewed and reproducible.
+                                I'm actively looking for remote or hybrid roles and international opportunities where I can grow
+                                alongside a great engineering team.</p>
+                            <ul class="about-facts">
+                                <li><span class="fact-key" data-i18n="fact-location-key">Based in</span><span class="fact-val"
+                                        data-i18n="fact-location-val">Mallorca, Spain</span></li>
+                                <li><span class="fact-key" data-i18n="fact-cloud-key">Cloud</span><span class="fact-val">AWS</span></li>
+                                <li><span class="fact-key" data-i18n="fact-iac-key">IaC</span><span class="fact-val">Terraform, CloudFormation</span></li>
+                                <li><span class="fact-key" data-i18n="fact-cicd-key">CI/CD</span><span class="fact-val">AWS CodePipeline, GitHub Actions</span></li>
+                                <li><span class="fact-key" data-i18n="fact-open-key">Open to</span><span class="fact-val" data-i18n="fact-open-val">Remote / Hybrid</span></li>
+                            </ul>
+                            <a href="projects.html" class="text-link" data-i18n="about-link">More about my experience →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience timeline -->
+                <div class="reveal">
+                    <h2 class="section-subtitle" data-i18n="exp-title">Experience</h2>
+                    <div class="experience-timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div>
+                                <span class="timeline-period" data-i18n="exp1-period">2022 – Present</span>
+                                <p class="timeline-role" data-i18n="exp1-role">DevOps &amp; Cloud Engineer</p>
+                                <p class="timeline-place" data-i18n="exp1-place">Remote · AWS</p>
+                                <p class="timeline-desc" data-i18n="exp1-desc">Designing and operating AWS infrastructure: CI/CD pipelines, Infrastructure as Code, container workloads and monitoring.</p>
+                                <div class="timeline-tags">
+                                    <span class="timeline-tag">AWS</span>
+                                    <span class="timeline-tag">Terraform</span>
+                                    <span class="timeline-tag">Docker</span>
+                                    <span class="timeline-tag">GitHub Actions</span>
+                                    <span class="timeline-tag">Python</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div>
+                                <span class="timeline-period" data-i18n="exp2-period">2021 – 2022</span>
+                                <p class="timeline-role" data-i18n="exp2-role">Cloud &amp; Systems Administrator</p>
+                                <p class="timeline-place" data-i18n="exp2-place">Mallorca, Spain</p>
+                                <p class="timeline-desc" data-i18n="exp2-desc">Managing on-premise and cloud systems, automating operational tasks and supporting migration initiatives to AWS.</p>
+                                <div class="timeline-tags">
+                                    <span class="timeline-tag">AWS</span>
+                                    <span class="timeline-tag">Linux</span>
+                                    <span class="timeline-tag">Bash</span>
+                                    <span class="timeline-tag">CloudFormation</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Languages -->
+                <div class="reveal">
+                    <h2 class="section-subtitle" data-i18n="lang-title">Languages</h2>
+                    <div class="lang-grid">
+                        <div class="lang-card">
+                            <p class="lang-name">Español</p>
+                            <p class="lang-level">Native</p>
+                            <p class="lang-sub">C2</p>
+                        </div>
+                        <div class="lang-card">
+                            <p class="lang-name">English</p>
+                            <p class="lang-level">Professional</p>
+                            <p class="lang-sub">C1</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

@@ -7,6 +7,11 @@
     <meta id="meta-desc" name="description"
         content="Álvaro — DevOps & Cloud Engineer. Interactive map of projects, skills and technologies." />
     <title>Álvaro — Projects & Skills</title>
+    <meta property="og:title" content="Álvaro — Projects & Skills" />
+    <meta property="og:description" content="AWS CI/CD pipelines, ML batch workflows, IaC with Terraform and containerised deployments." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://algonzalez.cloud/portfolio/projects.html" />
+    <meta property="og:image" content="https://algonzalez.cloud/portfolio/imagenes/favicon.png" />
     <link rel="icon" type="image/png" href="imagenes/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,8 +25,7 @@
         .graph-wrapper {
             display: flex;
             gap: 0;
-            height: calc(100svh - var(--header-h));
-            margin-top: var(--header-h);
+            height: 580px;
             position: relative;
             overflow: hidden;
         }
@@ -173,7 +177,7 @@
         }
 
         .legend-dot.skill {
-            background: #7aaaff;
+            background: #3ddc84;
         }
 
         /* Hint text */
@@ -218,7 +222,7 @@
 
 <body class="page-inner" data-page="projects">
 
-    <header class="site-header scrolled">
+    <header class="site-header">
         <div class="container header-inner">
             <a href="index.html" class="logo">Álvaro González</a>
             <div class="header-right">
@@ -258,6 +262,41 @@
     </header>
 
     <main>
+        <!-- Project cards -->
+        <section class="page-section">
+            <div class="container">
+                <span class="section-label" data-i18n="label-projects">What I've built</span>
+                <h1 class="section-title" data-i18n="title-projects">Projects</h1>
+                <p class="projects-intro reveal" data-i18n="projects-intro">A selection of infrastructure and automation projects I have built or contributed to.</p>
+                <div class="projects-grid reveal-stagger">
+                    <article class="project-card">
+                        <h2 class="project-name" data-i18n="proj1-name">AWS Deployment Pipeline</h2>
+                        <p class="project-desc" data-i18n="proj1-desc">End-to-end deployment automation using AWS CodePipeline.</p>
+                        <p class="project-stack">AWS CodePipeline · CodeBuild · EC2 · Auto Scaling · IAM</p>
+                        <a href="https://github.com/algonzalezguardiola" target="_blank" rel="noopener" class="project-link" data-i18n="proj-link">View on GitHub ↗</a>
+                    </article>
+                    <article class="project-card">
+                        <h2 class="project-name" data-i18n="proj2-name">Batch Data &amp; ML Pipeline</h2>
+                        <p class="project-desc" data-i18n="proj2-desc">Serverless batch workflow that picks up CSV files from S3, triggers inference jobs and persists results to RDS.</p>
+                        <p class="project-stack">S3 · Lambda · RDS · CloudWatch · Python</p>
+                        <a href="https://github.com/algonzalezguardiola" target="_blank" rel="noopener" class="project-link" data-i18n="proj-link">View on GitHub ↗</a>
+                    </article>
+                    <article class="project-card">
+                        <h2 class="project-name" data-i18n="proj3-name">IaC &amp; Containers Demo</h2>
+                        <p class="project-desc" data-i18n="proj3-desc">Reference project that provisions a complete AWS environment with Terraform and deploys via GitHub Actions.</p>
+                        <p class="project-stack">Terraform · ECS · Docker · VPC · GitHub Actions</p>
+                        <a href="https://github.com/algonzalezguardiola" target="_blank" rel="noopener" class="project-link" data-i18n="proj-link">View on GitHub ↗</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive tech graph -->
+        <div class="graph-section-header container">
+            <span class="section-label" data-i18n="graph-explore-label">Tech Exploration</span>
+            <h2 class="section-title" data-i18n="graph-explore-title">Technology Graph</h2>
+            <p class="graph-subtitle-text" data-i18n="graph-explore-sub">Interactive map of my projects and the technologies behind each one. Click a node to explore.</p>
+        </div>
         <div class="graph-wrapper">
             <!-- vis.js canvas -->
             <div id="graph-canvas"></div>
@@ -292,7 +331,7 @@
                     <div class="panel-projects-list" id="panelProjects"></div>
                 </div>
             </aside>
-        </div>
+        </div><!-- end graph-wrapper -->
     </main>
 
     <script src="https://unpkg.com/vis-network@9.1.9/standalone/umd/vis-network.min.js"></script>
