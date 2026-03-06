@@ -56,7 +56,11 @@ const translations = {
     'contact-avail': 'Available for hire · Remote &amp; Hybrid',
     'contact-github-label': 'GitHub', 'contact-github-sub': 'Projects &amp; code',
     'contact-linkedin-label': 'LinkedIn', 'contact-linkedin-sub': 'Professional profile',
+<<<<<<< HEAD
     'contact-email-label': 'Email', 'contact-email-sub': 'Preferred channel',
+=======
+    'contact-email-label': 'Email', 'contact-email-value': 'Click to send email', 'contact-email-sub': 'Preferred channel',
+>>>>>>> main
     'contact-cv-label': 'Curriculum Vitae', 'contact-cv-sub': 'Download PDF',
     'contact-response': 'Typically responds within 24 h',
   },
@@ -112,7 +116,11 @@ const translations = {
     'contact-avail': 'Disponible para trabajar · Remoto e Híbrido',
     'contact-github-label': 'GitHub', 'contact-github-sub': 'Proyectos y código',
     'contact-linkedin-label': 'LinkedIn', 'contact-linkedin-sub': 'Perfil profesional',
+<<<<<<< HEAD
     'contact-email-label': 'Email', 'contact-email-sub': 'Canal preferido',
+=======
+    'contact-email-label': 'Email', 'contact-email-value': 'Clic para enviar email', 'contact-email-sub': 'Canal preferido',
+>>>>>>> main
     'contact-cv-label': 'Currículum Vitae', 'contact-cv-sub': 'Descargar PDF',
     'contact-response': 'Responde normalmente en menos de 24 h',
   }
