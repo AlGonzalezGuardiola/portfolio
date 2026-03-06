@@ -220,3 +220,41 @@ const revealObserver = new IntersectionObserver(entries => {
 }, { threshold: 0.1 });
 
 document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => revealObserver.observe(el));
+
+/* ================================================================
+   INTRO OVERLAY (index.html only — first visit)
+   ================================================================ */
+(function () {
+  if (document.body.dataset.page !== 'home') return;
+
+  const overlay = document.getElementById('intro-overlay');
+  if (!overlay) return;
+
+  // Already seen — remove the node entirely so it never blocks anything
+  if (localStorage.getItem('introShown')) {
+    overlay.remove();
+    return;
+  }
+
+  // First visit — reveal the overlay and let the animation run
+  overlay.style.display = 'flex';
+
+  // Failsafe: force-hide after 4 s in case animationend never fires
+  const failsafe = setTimeout(hideOverlay, 4000);
+
+  const logo = overlay.querySelector('.intro-logo');
+  if (logo) {
+    logo.addEventListener('animationend', function () {
+      clearTimeout(failsafe);
+      hideOverlay();
+    }, { once: true });
+  }
+
+  function hideOverlay() {
+    overlay.classList.add('intro-out');
+    overlay.addEventListener('transitionend', function () {
+      overlay.style.display = 'none';
+      try { localStorage.setItem('introShown', 'true'); } catch (_) {}
+    }, { once: true });
+  }
+})();

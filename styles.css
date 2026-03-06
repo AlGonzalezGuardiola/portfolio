@@ -803,6 +803,69 @@ body.light-mode .hero-home::before {
 }
 
 /* ============================================================
+   INTRO OVERLAY
+   ============================================================ */
+#intro-overlay {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 0.45s ease;
+}
+
+#intro-overlay.intro-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.intro-logo-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro-logo {
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+  animation: introLogoAnim 2.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes introLogoAnim {
+  0% {
+    opacity: 0;
+    transform: scale(0.82);
+    filter: drop-shadow(0 0 0px #00ff41);
+  }
+  28% {
+    opacity: 1;
+    transform: scale(1);
+    filter: drop-shadow(0 0 16px #00ff41) drop-shadow(0 0 36px rgba(0, 255, 65, 0.45));
+  }
+  62% {
+    opacity: 1;
+    transform: scale(1.01);
+    filter: drop-shadow(0 0 26px #00ff41)
+            drop-shadow(0 0 55px rgba(0, 255, 65, 0.55))
+            drop-shadow(0 0 80px rgba(0, 255, 65, 0.25));
+  }
+  85% {
+    opacity: 1;
+    transform: scale(1.04);
+    filter: drop-shadow(0 0 20px #00ff41) drop-shadow(0 0 42px rgba(0, 255, 65, 0.5));
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 0px #00ff41);
+  }
+}
+
+/* ============================================================
    RESPONSIVE — tablet ≥640px
    ============================================================ */
 @media (min-width: 640px) {
