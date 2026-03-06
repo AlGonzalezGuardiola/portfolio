@@ -7,6 +7,11 @@
     <meta id="meta-desc" name="description"
         content="Álvaro — DevOps & Cloud Engineer. Get in touch via email or LinkedIn" />
     <title>Álvaro — Contact</title>
+    <meta property="og:title" content="Álvaro — Contact" />
+    <meta property="og:description" content="DevOps & Cloud Engineer open to remote and hybrid roles. Get in touch." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://algonzalez.cloud/portfolio/contact.html" />
+    <meta property="og:image" content="https://algonzalez.cloud/portfolio/imagenes/favicon.png" />
     <link rel="icon" type="image/png" href="imagenes/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -61,15 +66,40 @@
             <div class="container section-inner">
                 <span class="section-label" data-i18n="label-contact">Get in touch</span>
                 <h1 class="section-title" data-i18n="title-contact">Contact</h1>
+                <div class="contact-availability reveal">
+                    <span class="avail-dot"></span>
+                    <span data-i18n="contact-avail">Available for hire · Remote &amp; Hybrid</span>
+                </div>
                 <p class="contact-sub reveal" data-i18n="contact-sub">Interested in working together? Feel free to reach
                     out — I'm open to remote and hybrid opportunities.</p>
-                <div class="contact-links reveal">
-                    <a href="mailto:algonzalezguardiola@gmail.com" class="contact-btn contact-btn-primary"
-                        aria-label="Send me an email">algonzalezguardiola@gmail.com</a>
+
+                <div class="contact-cards reveal">
+                    <a href="mailto:algonzalezguardiola@gmail.com" class="contact-card" aria-label="Send me an email">
+                        <span class="contact-card-label" data-i18n="contact-email-label">Email</span>
+                        <span class="contact-card-value">algonzalezguardiola@gmail.com</span>
+                        <span class="contact-card-sub" data-i18n="contact-email-sub">Preferred channel</span>
+                    </a>
                     <a href="https://www.linkedin.com/in/álvaro-gonzález-guardiola-a16aa2264"
-                        class="contact-btn contact-btn-ghost" aria-label="Visit my LinkedIn profile">LinkedIn
-                        ↗</a>
+                        target="_blank" rel="noopener" class="contact-card" aria-label="Visit my LinkedIn profile">
+                        <span class="contact-card-label" data-i18n="contact-linkedin-label">LinkedIn</span>
+                        <span class="contact-card-value">Álvaro González</span>
+                        <span class="contact-card-sub" data-i18n="contact-linkedin-sub">Professional profile</span>
+                    </a>
+                    <a href="https://github.com/algonzalezguardiola"
+                        target="_blank" rel="noopener" class="contact-card" aria-label="Visit my GitHub profile">
+                        <span class="contact-card-label" data-i18n="contact-github-label">GitHub</span>
+                        <span class="contact-card-value">algonzalezguardiola</span>
+                        <span class="contact-card-sub" data-i18n="contact-github-sub">Projects &amp; code</span>
+                    </a>
+                    <a href="imagenes/cv-alvaro-gonzalez.pdf" download class="contact-card" aria-label="Download my CV">
+                        <span class="contact-card-label" data-i18n="contact-cv-label">Curriculum Vitae</span>
+                        <span class="contact-card-value">CV — Álvaro González</span>
+                        <span class="contact-card-sub" data-i18n="contact-cv-sub">Download PDF</span>
+                    </a>
                 </div>
+
+                <p class="reveal" style="margin-top:var(--space-md);font-size:var(--fs-sm);color:var(--text-muted);"
+                    data-i18n="contact-response">Typically responds within 24 h</p>
             </div>
         </section>
     </main>

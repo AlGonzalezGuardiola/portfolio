@@ -7,6 +7,11 @@
     <meta id="meta-desc" name="description"
         content="Álvaro — DevOps & Cloud Engineer specializing in AWS, CI/CD, Infrastructure as Code and containers." />
     <title>Álvaro — DevOps & Cloud Engineer</title>
+    <meta property="og:title" content="Álvaro — DevOps & Cloud Engineer" />
+    <meta property="og:description" content="DevOps & Cloud Engineer specializing in AWS, CI/CD, Infrastructure as Code and containers." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://algonzalez.cloud/portfolio/index.html" />
+    <meta property="og:image" content="https://algonzalez.cloud/portfolio/imagenes/favicon.png" />
     <link rel="icon" type="image/png" href="imagenes/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,6 +22,13 @@
 </head>
 
 <body data-page="home">
+
+    <!-- INTRO OVERLAY: visible on first visit only -->
+    <div id="intro-overlay" style="display:none" aria-hidden="true">
+        <div class="intro-logo-wrap">
+            <img src="imagenes/favicon.png" alt="" class="intro-logo">
+        </div>
+    </div>
 
     <header class="site-header">
         <div class="container header-inner">
@@ -65,10 +77,31 @@
                 <p class="hero-role" data-i18n="hero-role">DevOps &amp; Cloud Engineer</p>
                 <p class="hero-tagline" data-i18n="hero-tagline">I build and automate cloud infrastructure on AWS using
                     CI/CD, IaC and containers.</p>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <span class="stat-value">2+</span>
+                        <span class="stat-label" data-i18n="stat-years">years exp.</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="stat-value">AWS</span>
+                        <span class="stat-label" data-i18n="stat-cloud">Cloud specialist</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="stat-value">🌍</span>
+                        <span class="stat-label" data-i18n="stat-remote">Remote-ready</span>
+                    </div>
+                </div>
                 <div class="hero-btns">
                     <a href="about.html" class="home-btn" data-i18n="hero-btn-about">more about me</a>
                     <a href="projects.html" class="home-btn" data-i18n="hero-btn-projects">my projects</a>
                 </div>
+            </div>
+            <div class="scroll-indicator" aria-hidden="true">
+                <span data-i18n="scroll-down">Scroll</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
             </div>
         </section>
     </main>
