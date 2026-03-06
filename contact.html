@@ -5,8 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta id="meta-desc" name="description"
-        content="Álvaro — DevOps & Cloud Engineer specializing in AWS, CI/CD, Infrastructure as Code and containers." />
-    <title>Álvaro — DevOps & Cloud Engineer</title>
+        content="Álvaro — DevOps & Cloud Engineer. Get in touch via email, GitHub or LinkedIn." />
+    <title>Álvaro — Contact</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="styles.css" />
 </head>
 
-<body class="page-home" data-page="home">
+<body class="page-inner" data-page="contact">
 
     <!-- ===================== HEADER ===================== -->
     <header class="site-header">
@@ -47,20 +47,29 @@
         </div>
     </header>
 
-    <!-- ===================== HERO ===================== -->
+    <!-- ===================== MAIN ===================== -->
     <main>
-        <section class="hero-home" aria-labelledby="hero-heading">
-            <div class="hero-content">
-                <p class="hero-eyebrow" data-i18n="hero-eyebrow">Hola, my name is</p>
-                <h1 class="hero-name" id="hero-heading">Álvaro</h1>
-                <span class="hero-name-accent" aria-hidden="true"></span>
-                <p class="hero-role" data-i18n="hero-role">DevOps &amp; Cloud Engineer</p>
-                <p class="hero-tagline" data-i18n="hero-tagline">
-                    I build and automate cloud infrastructure on AWS using CI/CD, IaC and containers.
+        <section class="page-section" id="contact">
+            <div class="container section-inner">
+                <span class="section-label" data-i18n="label-contact">Get in touch</span>
+                <h1 class="section-title" data-i18n="title-contact">Contact</h1>
+
+                <p class="contact-sub reveal" data-i18n="contact-sub">
+                    Interested in working together? Feel free to reach out — I'm open to remote and hybrid
+                    opportunities.
                 </p>
-                <div class="hero-btns">
-                    <a href="about.html" class="home-btn" data-i18n="hero-btn-about">more about me</a>
-                    <a href="projects.html" class="home-btn" data-i18n="hero-btn-projects">my projects</a>
+
+                <div class="contact-links reveal">
+                    <a href="mailto:your-email@domain.com" class="contact-btn contact-btn-primary"
+                        aria-label="Send me an email">
+                        your-email@domain.com
+                    </a>
+                    <a href="#" class="contact-btn contact-btn-ghost" aria-label="Visit my GitHub profile">
+                        GitHub ↗
+                    </a>
+                    <a href="#" class="contact-btn contact-btn-ghost" aria-label="Visit my LinkedIn profile">
+                        LinkedIn ↗
+                    </a>
                 </div>
             </div>
         </section>
