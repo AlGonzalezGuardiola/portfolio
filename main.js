@@ -1,20 +1,19 @@
 /* main.js — vanilla JS for portfolio interactions */
 
-/* ── 1. Smooth scroll (also handles Edge/FF without CSS scroll-behavior) ── */
+/* ── 1. Smooth scroll (handles all anchor links) ── */
 document.querySelectorAll('a[href^="#"]').forEach(link => {
   link.addEventListener('click', e => {
     const target = document.querySelector(link.getAttribute('href'));
     if (!target) return;
     e.preventDefault();
     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    // close mobile nav if open
     closeMobileNav();
   });
 });
 
 /* ── 2. Mobile hamburger menu ── */
 const navToggle = document.getElementById('navToggle');
-const mainNav   = document.getElementById('mainNav');
+const mainNav = document.getElementById('mainNav');
 
 function closeMobileNav() {
   mainNav.classList.remove('open');
@@ -33,16 +32,16 @@ document.addEventListener('click', e => {
   }
 });
 
-/* ── 3. Header shadow on scroll ── */
+/* ── 3. Header background revealed on scroll ── */
 const header = document.querySelector('.site-header');
 
 window.addEventListener('scroll', () => {
-  header.classList.toggle('scrolled', window.scrollY > 20);
+  header.classList.toggle('scrolled', window.scrollY > 40);
 }, { passive: true });
 
 /* ── 4. Active nav link highlight on scroll ── */
 const sections = document.querySelectorAll('main section[id]');
-const navLinks  = document.querySelectorAll('.main-nav a[href^="#"]');
+const navLinks = document.querySelectorAll('.main-nav a[href^="#"]');
 
 const sectionObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
@@ -61,10 +60,10 @@ const revealObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('visible');
-      revealObserver.unobserve(entry.target); // animate once
+      revealObserver.unobserve(entry.target);
     }
   });
-}, { threshold: 0.12 });
+}, { threshold: 0.1 });
 
 document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => {
   revealObserver.observe(el);
