@@ -59,6 +59,7 @@ const translations = {
     'contact-email-label': 'Email', 'contact-email-value': 'Click to send email', 'contact-email-sub': 'Preferred channel',
     'contact-cv-label': 'Curriculum Vitae', 'contact-cv-sub': 'Download PDF',
     'contact-response': 'Typically responds within 24 h',
+    'cv-btn-es': 'CV en español', 'cv-btn-en': 'CV in English',
   },
   es: {
     'title-page-home': 'Álvaro — Ingeniero DevOps & Cloud',
@@ -115,6 +116,7 @@ const translations = {
     'contact-email-label': 'Email', 'contact-email-value': 'Clic para enviar email', 'contact-email-sub': 'Canal preferido',
     'contact-cv-label': 'Currículum Vitae', 'contact-cv-sub': 'Descargar PDF',
     'contact-response': 'Responde normalmente en menos de 24 h',
+    'cv-btn-es': 'CV en español', 'cv-btn-en': 'CV in English',
   }
 };
 
@@ -168,6 +170,14 @@ function setLanguage(lang) {
   // Re-stamp footer year after innerHTML swap
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  // Update CV download link on contact page
+  const cvCard = document.getElementById('cvDownloadCard');
+  if (cvCard) {
+    cvCard.href = lang === 'es'
+      ? 'CV/CV_Alvaro_Gonzalez_ES.pdf'
+      : 'CV/CV_Alvaro_Gonzalez_EN.pdf';
+  }
 
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.setAttribute('aria-pressed', String(btn.dataset.lang === lang));
