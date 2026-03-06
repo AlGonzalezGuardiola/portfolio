@@ -7,7 +7,6 @@
     <meta id="meta-desc" name="description"
         content="Álvaro — DevOps & Cloud Engineer. Projects: AWS pipelines, serverless ML workflows, IaC & containers." />
     <title>Álvaro — Projects</title>
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,22 +17,32 @@
 
 <body class="page-inner" data-page="projects">
 
-    <!-- ===================== HEADER ===================== -->
     <header class="site-header">
         <div class="container header-inner">
             <a href="index.html" class="logo">Álvaro</a>
-
             <div class="header-right">
                 <div class="lang-switcher" role="group" aria-label="Language selector">
                     <button class="lang-btn" id="langEN" data-lang="en" aria-pressed="true">EN</button>
                     <span class="lang-sep" aria-hidden="true">/</span>
                     <button class="lang-btn" id="langES" data-lang="es" aria-pressed="false">ES</button>
                 </div>
-
+                <button class="theme-toggle" id="themeToggle" aria-label="Switch to light mode">
+                    <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="12" cy="12" r="4" />
+                        <path
+                            d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+                    </svg>
+                    <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" aria-hidden="true">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                    </svg>
+                </button>
                 <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
                     <span></span><span></span><span></span>
                 </button>
-
                 <nav class="main-nav" id="mainNav" aria-label="Main navigation">
                     <ul>
                         <li><a href="index.html" data-i18n="nav-home">Home</a></li>
@@ -47,63 +56,44 @@
         </div>
     </header>
 
-    <!-- ===================== MAIN ===================== -->
     <main>
         <section class="page-section" id="projects">
             <div class="container">
                 <span class="section-label" data-i18n="label-projects">What I've built</span>
                 <h1 class="section-title" data-i18n="title-projects">Projects</h1>
-                <p class="projects-intro" data-i18n="projects-intro">
-                    A selection of infrastructure and automation projects I have built or contributed to.
-                </p>
+                <p class="projects-intro" data-i18n="projects-intro">A selection of infrastructure and automation
+                    projects I have built or contributed to.</p>
 
                 <div class="projects-grid reveal-stagger">
-
-                    <!-- Project 1 -->
                     <article class="project-card">
                         <h2 class="project-name" data-i18n="proj1-name">AWS Deployment Pipeline</h2>
-                        <p class="project-desc" data-i18n="proj1-desc">
-                            End-to-end deployment automation using AWS CodePipeline. Pulls source changes, runs
-                            validation scripts and automatically updates EC2 Launch Templates and Auto Scaling Groups —
-                            eliminating manual deployments entirely.
-                        </p>
+                        <p class="project-desc" data-i18n="proj1-desc">End-to-end deployment automation using AWS
+                            CodePipeline. Pulls source changes, runs validation scripts and automatically updates EC2
+                            Launch Templates and Auto Scaling Groups — eliminating manual deployments entirely.</p>
                         <p class="project-stack">AWS CodePipeline · EC2 · Auto Scaling · Python · Bash</p>
-                        <a href="#" class="project-link" data-i18n="proj-link"
-                            aria-label="View AWS Deployment Pipeline on GitHub">View on GitHub ↗</a>
+                        <a href="#" class="project-link" data-i18n="proj-link">View on GitHub ↗</a>
                     </article>
-
-                    <!-- Project 2 -->
                     <article class="project-card">
                         <h2 class="project-name" data-i18n="proj2-name">Batch Data &amp; ML Pipeline</h2>
-                        <p class="project-desc" data-i18n="proj2-desc">
-                            Serverless batch workflow that picks up CSV files from S3, triggers inference jobs against
-                            a trained ML model and persists structured results to a relational database — all fully
-                            automated and monitored via CloudWatch.
-                        </p>
+                        <p class="project-desc" data-i18n="proj2-desc">Serverless batch workflow that picks up CSV files
+                            from S3, triggers inference jobs against a trained ML model and persists structured results
+                            to a relational database — all fully automated and monitored via CloudWatch.</p>
                         <p class="project-stack">AWS S3 · Lambda · RDS · CloudWatch · Python</p>
-                        <a href="#" class="project-link" data-i18n="proj-link"
-                            aria-label="View Batch Data & ML Pipeline on GitHub">View on GitHub ↗</a>
+                        <a href="#" class="project-link" data-i18n="proj-link">View on GitHub ↗</a>
                     </article>
-
-                    <!-- Project 3 -->
                     <article class="project-card">
                         <h2 class="project-name" data-i18n="proj3-name">IaC &amp; Containers Demo</h2>
-                        <p class="project-desc" data-i18n="proj3-desc">
-                            Reference project that provisions a complete AWS environment (VPC, subnets, security groups,
-                            ECS cluster) using Terraform, then deploys a containerised application via a fully automated
-                            GitHub Actions workflow.
-                        </p>
+                        <p class="project-desc" data-i18n="proj3-desc">Reference project that provisions a complete AWS
+                            environment (VPC, subnets, security groups, ECS cluster) using Terraform, then deploys a
+                            containerised application via a fully automated GitHub Actions workflow.</p>
                         <p class="project-stack">Terraform · AWS ECS · Docker · GitHub Actions · IAM</p>
-                        <a href="#" class="project-link" data-i18n="proj-link"
-                            aria-label="View IaC & Containers Demo on GitHub">View on GitHub ↗</a>
+                        <a href="#" class="project-link" data-i18n="proj-link">View on GitHub ↗</a>
                     </article>
-
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- ===================== FOOTER ===================== -->
     <footer class="site-footer">
         <div class="container footer-inner">
             <p data-i18n="footer-text">&copy; <span id="year"></span> Álvaro. Built with HTML, CSS &amp; a little JS.

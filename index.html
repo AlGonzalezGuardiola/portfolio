@@ -7,7 +7,6 @@
     <meta id="meta-desc" name="description"
         content="Álvaro — DevOps & Cloud Engineer specializing in AWS, CI/CD, Infrastructure as Code and containers." />
     <title>Álvaro — DevOps & Cloud Engineer</title>
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,24 +15,34 @@
     <link rel="stylesheet" href="styles.css" />
 </head>
 
-<body class="page-home" data-page="home">
+<body data-page="home">
 
-    <!-- ===================== HEADER ===================== -->
     <header class="site-header">
         <div class="container header-inner">
             <a href="index.html" class="logo">Álvaro</a>
-
             <div class="header-right">
                 <div class="lang-switcher" role="group" aria-label="Language selector">
                     <button class="lang-btn" id="langEN" data-lang="en" aria-pressed="true">EN</button>
                     <span class="lang-sep" aria-hidden="true">/</span>
                     <button class="lang-btn" id="langES" data-lang="es" aria-pressed="false">ES</button>
                 </div>
-
+                <button class="theme-toggle" id="themeToggle" aria-label="Switch to light mode">
+                    <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="12" cy="12" r="4" />
+                        <path
+                            d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+                    </svg>
+                    <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" aria-hidden="true">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                    </svg>
+                </button>
                 <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
                     <span></span><span></span><span></span>
                 </button>
-
                 <nav class="main-nav" id="mainNav" aria-label="Main navigation">
                     <ul>
                         <li><a href="index.html" data-i18n="nav-home">Home</a></li>
@@ -47,7 +56,6 @@
         </div>
     </header>
 
-    <!-- ===================== HERO ===================== -->
     <main>
         <section class="hero-home" aria-labelledby="hero-heading">
             <div class="hero-content">
@@ -55,9 +63,8 @@
                 <h1 class="hero-name" id="hero-heading">Álvaro</h1>
                 <span class="hero-name-accent" aria-hidden="true"></span>
                 <p class="hero-role" data-i18n="hero-role">DevOps &amp; Cloud Engineer</p>
-                <p class="hero-tagline" data-i18n="hero-tagline">
-                    I build and automate cloud infrastructure on AWS using CI/CD, IaC and containers.
-                </p>
+                <p class="hero-tagline" data-i18n="hero-tagline">I build and automate cloud infrastructure on AWS using
+                    CI/CD, IaC and containers.</p>
                 <div class="hero-btns">
                     <a href="about.html" class="home-btn" data-i18n="hero-btn-about">more about me</a>
                     <a href="projects.html" class="home-btn" data-i18n="hero-btn-projects">my projects</a>
@@ -66,7 +73,6 @@
         </section>
     </main>
 
-    <!-- ===================== FOOTER ===================== -->
     <footer class="site-footer">
         <div class="container footer-inner">
             <p data-i18n="footer-text">&copy; <span id="year"></span> Álvaro. Built with HTML, CSS &amp; a little JS.

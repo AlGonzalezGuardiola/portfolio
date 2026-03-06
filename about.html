@@ -5,9 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta id="meta-desc" name="description"
-        content="Álvaro — DevOps & Cloud Engineer. Learn more about me, my background, and what I'm looking for." />
+        content="Álvaro — DevOps & Cloud Engineer. Learn more about my background and what I'm looking for." />
     <title>Álvaro — About</title>
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,22 +17,32 @@
 
 <body class="page-inner" data-page="about">
 
-    <!-- ===================== HEADER ===================== -->
     <header class="site-header">
         <div class="container header-inner">
             <a href="index.html" class="logo">Álvaro</a>
-
             <div class="header-right">
                 <div class="lang-switcher" role="group" aria-label="Language selector">
                     <button class="lang-btn" id="langEN" data-lang="en" aria-pressed="true">EN</button>
                     <span class="lang-sep" aria-hidden="true">/</span>
                     <button class="lang-btn" id="langES" data-lang="es" aria-pressed="false">ES</button>
                 </div>
-
+                <button class="theme-toggle" id="themeToggle" aria-label="Switch to light mode">
+                    <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="12" cy="12" r="4" />
+                        <path
+                            d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+                    </svg>
+                    <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" aria-hidden="true">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                    </svg>
+                </button>
                 <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
                     <span></span><span></span><span></span>
                 </button>
-
                 <nav class="main-nav" id="mainNav" aria-label="Main navigation">
                     <ul>
                         <li><a href="index.html" data-i18n="nav-home">Home</a></li>
@@ -47,58 +56,37 @@
         </div>
     </header>
 
-    <!-- ===================== MAIN ===================== -->
     <main>
         <section class="page-section" id="about">
             <div class="container section-inner">
                 <span class="section-label" data-i18n="label-about">Who I am</span>
                 <h1 class="section-title" data-i18n="title-about">About</h1>
-
                 <div class="about-story reveal">
-                    <p data-i18n="about-p1">
-                        I'm a DevOps &amp; Cloud Engineer with 2+ years of experience designing and operating
-                        infrastructure on AWS. My day-to-day revolves around automating repetitive work, building
-                        reliable CI/CD pipelines, and keeping systems observable and easy to maintain.
-                    </p>
-                    <p data-i18n="about-p2">
-                        I'm passionate about Infrastructure as Code — letting me treat cloud resources the same way
-                        developers treat application code: versioned, reviewed and reproducible. I'm actively looking
-                        for remote or hybrid roles and international opportunities where I can grow alongside a great
-                        engineering team.
-                    </p>
-
+                    <p data-i18n="about-p1">I'm a DevOps &amp; Cloud Engineer with 2+ years of experience designing and
+                        operating infrastructure on AWS. My day-to-day revolves around automating repetitive work,
+                        building reliable CI/CD pipelines, and keeping systems observable and easy to maintain.</p>
+                    <p data-i18n="about-p2">I'm passionate about Infrastructure as Code — letting me treat cloud
+                        resources the same way developers treat application code: versioned, reviewed and reproducible.
+                        I'm actively looking for remote or hybrid roles and international opportunities where I can grow
+                        alongside a great engineering team.</p>
                     <ul class="about-facts">
-                        <li>
-                            <span class="fact-key" data-i18n="fact-location-key">Based in</span>
-                            <span class="fact-val" data-i18n="fact-location-val">Mallorca, Spain</span>
-                        </li>
-                        <li>
-                            <span class="fact-key" data-i18n="fact-cloud-key">Cloud</span>
-                            <span class="fact-val">AWS</span>
-                        </li>
-                        <li>
-                            <span class="fact-key" data-i18n="fact-iac-key">IaC</span>
-                            <span class="fact-val">Terraform, CloudFormation</span>
-                        </li>
-                        <li>
-                            <span class="fact-key" data-i18n="fact-cicd-key">CI/CD</span>
-                            <span class="fact-val">AWS CodePipeline, GitHub Actions</span>
-                        </li>
-                        <li>
-                            <span class="fact-key" data-i18n="fact-open-key">Open to</span>
-                            <span class="fact-val" data-i18n="fact-open-val">Remote / Hybrid</span>
-                        </li>
+                        <li><span class="fact-key" data-i18n="fact-location-key">Based in</span><span class="fact-val"
+                                data-i18n="fact-location-val">Mallorca, Spain</span></li>
+                        <li><span class="fact-key" data-i18n="fact-cloud-key">Cloud</span><span
+                                class="fact-val">AWS</span></li>
+                        <li><span class="fact-key" data-i18n="fact-iac-key">IaC</span><span class="fact-val">Terraform,
+                                CloudFormation</span></li>
+                        <li><span class="fact-key" data-i18n="fact-cicd-key">CI/CD</span><span class="fact-val">AWS
+                                CodePipeline, GitHub Actions</span></li>
+                        <li><span class="fact-key" data-i18n="fact-open-key">Open to</span><span class="fact-val"
+                                data-i18n="fact-open-val">Remote / Hybrid</span></li>
                     </ul>
-
-                    <a href="projects.html" class="text-link" data-i18n="about-link">
-                        More about my experience →
-                    </a>
+                    <a href="projects.html" class="text-link" data-i18n="about-link">More about my experience →</a>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- ===================== FOOTER ===================== -->
     <footer class="site-footer">
         <div class="container footer-inner">
             <p data-i18n="footer-text">&copy; <span id="year"></span> Álvaro. Built with HTML, CSS &amp; a little JS.
