@@ -13,7 +13,7 @@ const translations = {
     'meta-desc': 'Álvaro — DevOps & Cloud Engineer specializing in AWS, CI/CD, Infrastructure as Code and containers.',
     'nav-home': 'Home', 'nav-about': 'About', 'nav-projects': 'Projects',
     'nav-skills': 'Skills', 'nav-contact': 'Contact',
-    'hero-eyebrow': 'Hola, my name is',
+    'hero-eyebrow': 'Hi, my name is',
     'hero-role': 'DevOps & Cloud Engineer',
     'hero-tagline': 'I build and automate cloud infrastructure on AWS using CI/CD, IaC and containers.',
     'hero-btn-about': 'more about me',
