@@ -1271,6 +1271,15 @@ body.light-mode .hero-home::before {
    RESPONSIVE — mobile menu <768px
    ============================================================ */
 @media (max-width: 767px) {
+  /* Header: always solid background on mobile so logo + hamburger are
+     visible even before the user scrolls (before .scrolled is applied) */
+  .site-header {
+    background-color: var(--bg);
+    border-bottom-color: var(--border);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+
   .nav-toggle {
     display: flex;
   }
@@ -1283,7 +1292,7 @@ body.light-mode .hero-home::before {
     background: var(--surface);
     border-bottom: 1px solid var(--border);
     padding: var(--space-md);
-    transform: translateY(-110%);
+    transform: translateY(-130%);
     transition: transform .28s ease;
     z-index: 999;
   }
