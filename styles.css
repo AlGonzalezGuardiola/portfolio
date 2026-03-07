@@ -1328,9 +1328,9 @@ body.light-mode .hero-home::before {
    RESPONSIVE — full mobile improvements
    ============================================================ */
 
-/* Prevent horizontal scroll on all pages */
-body {
-  overflow-x: hidden;
+/* Prevent horizontal scroll without affecting fixed elements */
+html {
+  overflow-x: clip;
 }
 
 /* Skills section inside projects.html: it is NOT the first section,
