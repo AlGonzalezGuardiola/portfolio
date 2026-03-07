@@ -1323,3 +1323,91 @@ body.light-mode .hero-home::before {
     font-size: var(--fs-base);
   }
 }
+
+/* ============================================================
+   RESPONSIVE — full mobile improvements
+   ============================================================ */
+
+/* Prevent horizontal scroll on all pages */
+body {
+  overflow-x: hidden;
+}
+
+/* Skills section inside projects.html: it is NOT the first section,
+   so it must NOT compensate for the fixed header height */
+[data-page="projects"] #skills {
+  padding-top: var(--space-xl);
+}
+
+/* Reduce section vertical padding on mobile so pages feel tighter */
+@media (max-width: 767px) {
+  .page-section {
+    padding-block: var(--space-lg);
+    padding-top: calc(var(--header-h) + var(--space-lg));
+  }
+
+  /* Override also the non-first skills section on projects page */
+  [data-page="projects"] #skills {
+    padding-top: var(--space-lg);
+  }
+
+  /* Reduce subtitle top gap */
+  .section-subtitle {
+    margin-top: var(--space-md);
+  }
+
+  /* Reduce intro text size */
+  .projects-intro {
+    font-size: var(--fs-base);
+  }
+
+  /* Tighter stats row */
+  .hero-stats {
+    gap: 1.5rem;
+  }
+
+  /* Graph section header padding */
+  .graph-section-header {
+    padding-block: var(--space-sm);
+  }
+}
+
+/* Graph canvas: shorter on phones so it doesn't swallow the screen */
+@media (max-width: 640px) {
+  .graph-wrapper {
+    height: 380px;
+  }
+}
+
+/* Contact cards and lang cards on small screens */
+@media (max-width: 480px) {
+  .contact-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .lang-card {
+    min-width: 120px;
+    flex: 1;
+  }
+
+  /* CV download buttons stack vertically */
+  .cv-downloads {
+    flex-direction: column;
+  }
+
+  .btn-cv {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Header: keep logo readable on very small screens */
+@media (max-width: 380px) {
+  .logo {
+    font-size: var(--fs-sm);
+  }
+
+  .header-right {
+    gap: 0.75rem;
+  }
+}
