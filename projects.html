@@ -18,6 +18,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
         rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <link rel="stylesheet" href="styles.css" />
 
     <style>
@@ -252,8 +253,7 @@
                     <ul>
                         <li><a href="index.html" data-i18n="nav-home">Home</a></li>
                         <li><a href="about.html" data-i18n="nav-about">About</a></li>
-                        <li><a href="projects.html" data-i18n="nav-projects">Projects</a></li>
-                        <li><a href="skills.html" data-i18n="nav-skills">Skills</a></li>
+                        <li><a href="projects.html" data-i18n="nav-projects">Projects & Skills</a></li>
                         <li><a href="contact.html" data-i18n="nav-contact">Contact</a></li>
                     </ul>
                 </nav>
@@ -332,7 +332,74 @@
                 </div>
             </aside>
         </div><!-- end graph-wrapper -->
+
+        <!-- Skills section -->
+        <section class="page-section" id="skills">
+            <div class="container">
+                <span class="section-label" data-i18n="label-skills">What I work with</span>
+                <h2 class="section-title" data-i18n="title-skills">Skills</h2>
+                <div class="skills-block reveal-stagger">
+                    <div class="skill-group">
+                        <h3 class="skill-cat" data-i18n="cat-cloud">Cloud</h3>
+                        <div class="badges">
+                            <span class="badge lvl-3"><i class="devicon-amazonwebservices-plain colored"></i> AWS EC2</span>
+                            <span class="badge lvl-3"><i class="devicon-amazonwebservices-plain colored"></i> S3</span>
+                            <span class="badge lvl-2"><i class="devicon-amazonwebservices-plain colored"></i> RDS</span>
+                            <span class="badge lvl-2"><i class="devicon-amazonwebservices-plain colored"></i> Lambda</span>
+                            <span class="badge lvl-3"><i class="devicon-amazonwebservices-plain colored"></i> IAM</span>
+                            <span class="badge lvl-2"><i class="devicon-amazonwebservices-plain colored"></i> CloudWatch</span>
+                            <span class="badge lvl-3"><i class="devicon-amazonwebservices-plain colored"></i> CodePipeline</span>
+                            <span class="badge lvl-2"><i class="devicon-amazonwebservices-plain colored"></i> Auto Scaling</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <h3 class="skill-cat" data-i18n="cat-iac">Infrastructure as Code</h3>
+                        <div class="badges">
+                            <span class="badge lvl-3"><i class="devicon-terraform-plain colored"></i> Terraform</span>
+                            <span class="badge lvl-2"><i class="devicon-amazonwebservices-plain colored"></i> CloudFormation</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <h3 class="skill-cat" data-i18n="cat-cicd">CI / CD</h3>
+                        <div class="badges">
+                            <span class="badge lvl-3"><i class="devicon-amazonwebservices-plain colored"></i> AWS CodePipeline</span>
+                            <span class="badge lvl-3"><i class="devicon-githubactions-plain colored"></i> GitHub Actions</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <h3 class="skill-cat" data-i18n="cat-containers">Containers &amp; Orchestration</h3>
+                        <div class="badges">
+                            <span class="badge lvl-3"><i class="devicon-docker-plain colored"></i> Docker</span>
+                            <span class="badge lvl-2"><i class="devicon-amazonwebservices-plain colored"></i> Amazon ECS</span>
+                            <span class="badge lvl-1"><i class="devicon-kubernetes-plain colored"></i> Kubernetes</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <h3 class="skill-cat" data-i18n="cat-langs">Languages &amp; Tools</h3>
+                        <div class="badges">
+                            <span class="badge lvl-2"><i class="devicon-python-plain colored"></i> Python</span>
+                            <span class="badge lvl-3"><i class="devicon-bash-plain"></i> Bash</span>
+                            <span class="badge lvl-3"><i class="devicon-git-plain colored"></i> Git</span>
+                            <span class="badge lvl-3"><i class="devicon-linux-plain"></i> Linux</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <h3 class="skill-cat" data-i18n="lang-title">Languages</h3>
+                        <div class="badges">
+                            <span class="badge lvl-3">🇪🇸 Español — Native</span>
+                            <span class="badge lvl-3">🇬🇧 English — C1</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p data-i18n="footer-text">&copy; <span id="year"></span> Álvaro González. Built with HTML, CSS &amp; a little JS.</p>
+        </div>
+    </footer>
 
     <script src="https://unpkg.com/vis-network@9.1.9/standalone/umd/vis-network.min.js"></script>
     <script src="main.js"></script>
