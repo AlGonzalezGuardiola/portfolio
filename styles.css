@@ -1328,9 +1328,11 @@ body.light-mode .hero-home::before {
    RESPONSIVE — full mobile improvements
    ============================================================ */
 
-/* Prevent horizontal scroll without affecting fixed elements */
-html {
-  overflow-x: clip;
+/* Prevent horizontal scroll — applied to main/footer only so the
+   fixed header is never clipped by an overflow context */
+main,
+.site-footer {
+  overflow-x: hidden;
 }
 
 /* Skills section inside projects.html: it is NOT the first section,
