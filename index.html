@@ -110,7 +110,50 @@
         </div>
     </footer>
 
-    <script src="main.js?v=5"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" crossorigin="anonymous"></script>
+    <script src="main.js?v=6"></script>
+    <script>
+      /* ── Hero character-by-character entrance animation ── */
+      (function () {
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        if (typeof anime === 'undefined') return;
+
+        var nameEl = document.getElementById('hero-heading');
+        var roleEl = document.querySelector('.hero-role');
+        if (!nameEl || !roleEl) return;
+
+        function split(el) {
+          /* Keep full text accessible even with chars split into spans */
+          el.setAttribute('aria-label', el.textContent);
+          el.innerHTML = Array.from(el.textContent).map(function (c) {
+            return '<span aria-hidden="true" style="display:inline-block;opacity:0">'
+              + (c === ' ' ? '&nbsp;' : c) + '</span>';
+          }).join('');
+        }
+
+        split(nameEl);
+        split(roleEl);
+
+        /* On first visit the intro overlay plays ~3.2 s; delay until it fades */
+        var base = localStorage.getItem('introShown') ? 150 : 3400;
+
+        anime.timeline({ easing: 'easeOutCubic' })
+          .add({
+            targets: '#hero-heading span',
+            opacity: [0, 1],
+            translateY: [14, 0],
+            duration: 500,
+            delay: anime.stagger(40, { start: base })
+          })
+          .add({
+            targets: '.hero-role span',
+            opacity: [0, 1],
+            translateY: [8, 0],
+            duration: 380,
+            delay: anime.stagger(22)
+          }, '-=100');
+      }());
+    </script>
 </body>
 
 </html>

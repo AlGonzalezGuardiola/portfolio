@@ -164,7 +164,10 @@ function setLanguage(lang) {
 
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
-    if (t[key] !== undefined) el.innerHTML = t[key];
+    if (t[key] !== undefined) {
+      el.innerHTML = t[key];
+      el.removeAttribute('aria-label'); // clear any animation-set aria-label
+    }
   });
 
   // Re-stamp footer year after innerHTML swap
