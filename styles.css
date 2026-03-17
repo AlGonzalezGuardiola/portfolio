@@ -55,6 +55,28 @@ body.light-mode {
 }
 
 /* ============================================================
+   SKIP LINK (keyboard accessibility)
+   ============================================================ */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 10000;
+  background: var(--accent);
+  color: var(--bg);
+  padding: .5rem 1.25rem;
+  border-radius: var(--radius);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  text-decoration: none;
+  transition: top .15s ease;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* ============================================================
    RESET & BASE
    ============================================================ */
 *,
@@ -203,6 +225,12 @@ ul {
   color: var(--text);
 }
 
+.main-nav a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
 .main-nav a:hover::after,
 .main-nav a.active::after {
   width: 100%;
@@ -226,9 +254,10 @@ ul {
   font-weight: 700;
   letter-spacing: .1em;
   color: var(--text-muted);
-  padding: 2px;
+  padding: 2px 6px;
   position: relative;
   transition: color var(--transition);
+  min-height: 44px;
 }
 
 .lang-btn::after {
@@ -281,6 +310,8 @@ ul {
   border-radius: var(--radius-sm);
   transition: color var(--transition);
   flex-shrink: 0;
+  min-width: 44px;
+  min-height: 44px;
 }
 
 .theme-toggle:hover {
@@ -321,6 +352,8 @@ body.light-mode .icon-moon {
   border: none;
   cursor: pointer;
   padding: 4px;
+  min-width: 44px;
+  min-height: 44px;
 }
 
 .nav-toggle span {
@@ -763,7 +796,7 @@ body.light-mode .hero-home::before {
 .reveal {
   opacity: 0;
   transform: translateY(22px);
-  transition: opacity .6s ease, transform .6s ease;
+  transition: opacity .4s ease, transform .4s ease;
 }
 
 .reveal.visible {
@@ -774,7 +807,7 @@ body.light-mode .hero-home::before {
 .reveal-stagger>* {
   opacity: 0;
   transform: translateY(18px);
-  transition: opacity .5s ease, transform .5s ease;
+  transition: opacity .35s ease, transform .35s ease;
 }
 
 .reveal-stagger.visible>* {
@@ -1145,6 +1178,11 @@ body.light-mode .hero-home::before {
   transform: translateY(-3px);
 }
 
+.contact-card:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
 .contact-card-label {
   font-size: var(--fs-xs);
   font-weight: 700;
@@ -1420,5 +1458,38 @@ main,
 
   .header-right {
     gap: 0.75rem;
+  }
+}
+
+/* ============================================================
+   TOUCH — eliminate 300ms tap delay on interactive elements
+   ============================================================ */
+button,
+a,
+[role="button"] {
+  touch-action: manipulation;
+}
+
+/* ============================================================
+   REDUCED MOTION — respect user preference
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  /* Immediately show scroll-reveal elements */
+  .reveal,
+  .reveal-stagger > * {
+    opacity: 1 !important;
+    transform: none !important;
   }
 }

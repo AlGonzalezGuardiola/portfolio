@@ -236,6 +236,9 @@ if (navToggle && mainNav) {
   document.addEventListener('click', e => {
     if (!mainNav.contains(e.target) && !navToggle.contains(e.target)) closeMobileNav();
   });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeMobileNav();
+  });
 }
 
 /* ================================================================

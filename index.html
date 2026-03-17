@@ -18,10 +18,12 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=4" />
+    <link rel="stylesheet" href="styles.css?v=5" />
 </head>
 
 <body data-page="home">
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <!-- INTRO OVERLAY: visible on first visit only -->
     <div id="intro-overlay" style="display:none" aria-hidden="true">
@@ -68,7 +70,7 @@
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <section class="hero-home" aria-labelledby="hero-heading">
             <div class="hero-content">
                 <p class="hero-eyebrow" data-i18n="hero-eyebrow">Hi, my name is</p>
@@ -87,7 +89,9 @@
                         <span class="stat-label" data-i18n="stat-cloud">Cloud specialist</span>
                     </div>
                     <div class="hero-stat">
-                        <span class="stat-value">🌍</span>
+                        <span class="stat-value" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:block" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                        </span>
                         <span class="stat-label" data-i18n="stat-remote">Remote-ready</span>
                     </div>
                 </div>
@@ -106,7 +110,7 @@
         </div>
     </footer>
 
-    <script src="main.js?v=4"></script>
+    <script src="main.js?v=5"></script>
 </body>
 
 </html>
